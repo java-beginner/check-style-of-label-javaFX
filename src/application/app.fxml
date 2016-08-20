@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="550.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.AppController">
+  <center>
+    <Pane prefHeight="550.0" prefWidth="850.0" BorderPane.alignment="CENTER">
+      <children>
+
+        <BorderPane layoutX="360.0" layoutY="15.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: red;">
+          <center>
+            <Label fx:id="targetLabel1" prefHeight="100.0" prefWidth="100.0" text="Label" BorderPane.alignment="CENTER" />
+          </center>
+        </BorderPane>
+        <BorderPane layoutX="360.0" layoutY="125.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: red;">
+          <center>
+            <Label fx:id="targetLabel2" prefHeight="100.0" prefWidth="100.0" text="Thank you for using this application." BorderPane.alignment="CENTER" />
+          </center>
+        </BorderPane>
+
+        <BorderPane layoutX="360.0" layoutY="235.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: red;">
+          <center>
+            <Label fx:id="targetLabel3" prefHeight="100.0" prefWidth="100.0" text="いろはにほへとちりぬるをわかよたれそつねならむうゐのおくやまけふこえてあさきゆめみしゑひもせす" BorderPane.alignment="CENTER" />
+          </center>
+        </BorderPane>
+
+        <Button layoutX="360.0" layoutY="350.0" mnemonicParsing="false" onAction="#clear" text="クリア" />
+
+        <TextArea fx:id="targetTextArea" editable="false" layoutX="360.0" layoutY="390.0" prefHeight="150.0" prefWidth="350.0" promptText="コンボボックスからスタイルを選択してください。" />
+
+        <TabPane layoutX="15.0" layoutY="15.0" prefHeight="420.0" prefWidth="340.0" style="-fx-border-color: black;" tabClosingPolicy="UNAVAILABLE">
+          <tabs>
+            <Tab text="text">
+              <content>
+                <AnchorPane fx:id="anchorPaneText" minHeight="0.0" minWidth="0.0" prefHeight="143.0" prefWidth="348.0">
+                  <children>
+                    <Label layoutX="56.0" layoutY="24.0" text="-fx-alignment" />
+                    <ComboBox id="comboBox-fx-alignment" layoutX="150.0" layoutY="20.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="top-left" />
+                          <String fx:value="top-center" />
+                          <String fx:value="top-right" />
+                          <String fx:value="center-left" />
+                          <String fx:value="center" />
+                          <String fx:value="center-right" />
+                          <String fx:value="bottom-left" />
+                          <String fx:value="bottom-center" />
+                          <String fx:value="bottom-right" />
+                          <String fx:value="baseline-left" />
+                          <String fx:value="baseline-center" />
+                          <String fx:value="baseline-right" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+                    <Label layoutX="38.0" layoutY="64.0" text="-fx-text-alignment" />
+                    <ComboBox id="comboBox-fx-text-alignment" layoutX="150.0" layoutY="60.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="left" />
+                          <String fx:value="center" />
+                          <String fx:value="right" />
+                          <String fx:value="justify" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+
+                    <Label layoutX="50.0" layoutY="104.0" text="-fx-text-overrun" />
+                    <ComboBox id="comboBox-fx-text-overrun" layoutX="150.0" layoutY="100.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="center-ellipsis" />
+                          <String fx:value="center-word-ellipsis" />
+                          <String fx:value="clip" />
+                          <String fx:value="ellipsis" />
+                          <String fx:value="leading-ellipsis" />
+                          <String fx:value="leading-word-ellipsis" />
+                          <String fx:value="word-ellipsis" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+                    <Label layoutX="64.0" layoutY="144.0" text="-fx-wrap-text" />
+                    <ComboBox id="comboBox-fx-wrap-text" layoutX="150.0" layoutY="140.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="true" />
+                          <String fx:value="false" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+                    <Label layoutX="65.0" layoutY="184.0" text="-fx-underline" />
+                    <ComboBox id="comboBox-fx-underline" layoutX="150.0" layoutY="180.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="true" />
+                          <String fx:value="false" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+                    <Label layoutX="36.0" layoutY="224.0" text="-fx-content-display" />
+                    <ComboBox id="comboBox-fx-content-display" layoutX="150.0" layoutY="220.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="right" />
+                          <String fx:value="bottom" />
+                          <String fx:value="left" />
+                          <String fx:value="center" />
+                          <String fx:value="right" />
+                          <String fx:value="graphic-only" />
+                          <String fx:value="text-only" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+                    <Label layoutX="41.0" layoutY="264.0" text="-fx-label-padding" />
+                    <ComboBox id="comboBox-fx-label-padding" layoutX="150.0" layoutY="260.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="0px" />
+                          <String fx:value="1px" />
+                          <String fx:value="2px" />
+                          <String fx:value="3px" />
+                          <String fx:value="4px" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+                    <Label layoutX="78.0" layoutY="304.0" text="-fx-text-fill" />
+                    <ComboBox id="comboBox-fx-text-fill" layoutX="150.0" layoutY="300.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="black" />
+                          <String fx:value="green" />
+                          <String fx:value="linear-gradient(to bottom right, red, black)" />
+                          <String fx:value="radial-gradient(radius 100%, red, darkgray, black)" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+
+                    <Label layoutX="42.0" layoutY="344.0" text="-fx-ellipsis-string" />
+                    <ComboBox id="comboBox-fx-ellipsis-string" layoutX="150.0" layoutY="340.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="'...'" />
+                          <String fx:value="''" />
+                          <String fx:value="'・・・略'" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+
+            <Tab text="font">
+              <content>
+                <AnchorPane fx:id="anchorPaneFont" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Label layoutX="53.0" layoutY="24.0" text="-fx-font-family" />
+                    <ComboBox id="comboBox-fx-font-family" layoutX="150.0" layoutY="20.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="serif" />
+                          <String fx:value="sans-serif" />
+                          <String fx:value="cursive" />
+                          <String fx:value="fantasy" />
+                          <String fx:value="monospace" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label layoutX="61.0" layoutY="64.0" text="-fx-font-size" />
+                    <ComboBox id="comboBox-fx-font-size" layoutX="150.0" layoutY="60.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="9pt" />
+                          <String fx:value="10pt" />
+                          <String fx:value="11pt" />
+                          <String fx:value="12pt" />
+                          <String fx:value="13pt" />
+                          <String fx:value="14pt" />
+                          <String fx:value="15pt" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label layoutX="59.0" layoutY="102.0" text="-fx-font-style" />
+                    <ComboBox id="comboBox-font-style" layoutX="150.0" layoutY="100.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="normal" />
+                          <String fx:value="italic" />
+                          <String fx:value="oblique" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label layoutX="45.0" layoutY="143.0" text="-fx-font-weight" />
+                    <ComboBox id="comboBox-fx-font-weight" layoutX="150.0" layoutY="140.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="normal" />
+                          <String fx:value="bold" />
+                          <String fx:value="bolder" />
+                          <String fx:value="lighter" />
+                          <String fx:value="100" />
+                          <String fx:value="200" />
+                          <String fx:value="300" />
+                          <String fx:value="300" />
+                          <String fx:value="400" />
+                          <String fx:value="500" />
+                          <String fx:value="600" />
+                          <String fx:value="700" />
+                          <String fx:value="800" />
+                          <String fx:value="900" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="graphic">
+              <content>
+                <AnchorPane fx:id="anchorPaneGraphic" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Label layoutX="64.0" layoutY="21.0" text="-fx-graphic" />
+                    <ComboBox id="comboBox-fx-graphic" layoutX="150.0" layoutY="20.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="null" />
+                          <String fx:value="url(/resource/leaf.png)" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                    <Label layoutX="14.0" layoutY="64.0" text="-fx-graphic-text-gap" />
+                    <ComboBox id="comboBox-fx-graphic-text-gap" layoutX="150.0" layoutY="60.0" onAction="#changeStyle" prefWidth="150.0">
+                      <items>
+                        <FXCollections fx:factory="observableArrayList">
+                          <String fx:value="1" />
+                          <String fx:value="2" />
+                          <String fx:value="3" />
+                          <String fx:value="4" />
+                          <String fx:value="5" />
+                        </FXCollections>
+                      </items>
+                    </ComboBox>
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+          </tabs>
+        </TabPane>
+
+            <BorderPane layoutX="15.0" layoutY="440.0" prefHeight="100.0" prefWidth="340.0">
+               <center>
+                  <Hyperlink alignment="CENTER" onAction="#showWebSite" prefHeight="100.0" prefWidth="300.0" text="© 2016 Javaを復習する初心者" BorderPane.alignment="CENTER" />
+               </center>
+            </BorderPane>
+
+      </children>
+    </Pane>
+  </center>
+</BorderPane>
